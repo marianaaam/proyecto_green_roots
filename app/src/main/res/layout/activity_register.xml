@@ -1,6 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/logoAppRegister"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/logo"
+            />
+
+        <TextView
+            android:id="@+id/textNameAppRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/appName"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textInstructiveRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textInstructiveRegister"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <EditText
+            android:id="@+id/etNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textNameRegister"
+            />
+        <EditText
+            android:id="@+id/etLastNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textLastNameRegister"
+            />
+        <EditText
+            android:id="@+id/etEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textEmailRegister"
+            />
+        <EditText
+            android:id="@+id/etPhoneRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textPhoneRegister"
+            />
+        <EditText
+            android:id="@+id/etPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textPasswordRegister"
+            />
+        <EditText
+            android:id="@+id/etConfirmPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textConfirmPasswordRegister"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxTermsRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textTermsRegister"
+            android:checked="false"
+            android:buttonTint="@color/green"
+            android:fontFamily="serif"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="30dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="serif"
+            android:text="@string/textRegister"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="3dp"
+            />
+
+        <TextView
+            android:id="@+id/textYesCountRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textYesCountRegister"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>
