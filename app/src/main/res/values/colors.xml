@@ -5,4 +5,5 @@
     <color name="green">#11AC54</color>
     <color name="orange">#EF984E</color>
     <color name="whiteInputs">#FFFFFFFF</color>
+    <color name="gray">#666766</color>
 </resources>

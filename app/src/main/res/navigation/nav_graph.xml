@@ -12,4 +12,11 @@
         android:label=""
         />
 
+    <fragment
+        android:id="@+id/CartFragment"
+        android:name="com.example.green_roots.fragments.CartFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+
 </navigation>

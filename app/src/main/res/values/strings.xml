@@ -67,11 +67,14 @@
     <string name="textDescriptionAppStart">GreenRoots es una tienda ecológica en línea que ofrece productos sostenibles y amigables con el medio ambiente. Conecta a consumidores responsables con marcas y productores comprometidos con prácticas éticas.</string>
     <string name="textEmptyCart">Tu carrito está vacío</string>
     <string name="textTotalDefect">Total: $0</string>
-    <string name="textBuy">Realizar compra</string>
+    <string name="textBuy">Comprar</string>
     <string name="textDelete">Eliminar</string>
     <string name="plusSign">+</string>
     <string name="numDefectAmount">1</string>
     <string name="minusSign">-</string>
     <string name="TittleFragmentCarrito">Carrito de compras</string>
     <string name="TittleFragmentEditProfile">Editar Perfil</string>
+    <string name="comprasMenu">Compras</string>
+    <string name="mapaMenu">Tiendas</string>
+    <string name="textAmount">Cantidad:</string>
 </resources>
