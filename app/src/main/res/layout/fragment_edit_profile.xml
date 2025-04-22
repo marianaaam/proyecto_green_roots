@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="@string/TittleFragmentEditProfile"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:fontFamily="serif"
+                android:gravity="start"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                app:srcCompat="@drawable/logo"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/rounded_corners"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginBottom="26dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_corners"
+                android:clipToOutline="true"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/icon_user" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+                <Button
+                    android:id="@+id/buttonChangePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    app:strokeColor="@color/orange"
+                    app:strokeWidth="3dp"
+                    android:fontFamily="serif"
+                    android:text="Cambiar foto"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etNameProfile"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="@string/textNameRegister"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/etLastNameProfile"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="@string/textLastNameRegister"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/etEmailProfile"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="@string/textEmailRegister"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/etPhoneProfile"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="@string/textPhoneRegister"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/buttonEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="30dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="serif"
+            android:text="@string/textProfile"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="3dp"
+            />
+
+        <TextView
+            android:id="@+id/textGoBackProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textGoBack"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
