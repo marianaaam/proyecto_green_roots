@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_cart"
         android:title="@string/carritoMenu" />
     <item
-        android:id="@+id/TiendasFragment"
+        android:id="@+id/DirectionsFragment"
         android:icon="@drawable/ic_map"
         android:title="@string/mapaMenu" />
     <item

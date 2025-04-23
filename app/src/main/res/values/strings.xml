@@ -77,6 +77,9 @@
     <string name="comprasMenu">Compras</string>
     <string name="mapaMenu">Tiendas</string>
     <string name="textAmount">Cantidad:</string>
+    <string name="TittleFragmentDirections">Mapa - Tiendas</string>
+    <string name="NameDirectionStore1">– Verde pluma – Tv. 69b Bis #72-2 a 72-86</string>
+    <string name="NameDirectionStore2">- Verde pluma - Cra. 70 Bis #71a-2 a 71a-94</string>
     <string name="gProductos">Gestión de productos</string>
     <string name="v_productos">Ver productos</string>
     <string name="cerrarSesion">Cerrar sesión</string>
