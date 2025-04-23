@@ -77,4 +77,6 @@
     <string name="comprasMenu">Compras</string>
     <string name="mapaMenu">Tiendas</string>
     <string name="textAmount">Cantidad:</string>
+    <string name="gProductos">Gestión de productos</string>
+    <string name="v_productos">Ver productos</string>
 </resources>

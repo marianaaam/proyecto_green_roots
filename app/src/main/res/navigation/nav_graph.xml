@@ -9,12 +9,22 @@
         android:id="@+id/inicioFragment"
         android:name="com.example.green_roots.fragments.InicioFragment"
         app:defaultNavHost="true"
-        android:label=""
-        />
+        android:label="">
+        <action
+            android:id="@+id/action_inicioFragment_to_ProductsFragment"
+            app:destination="@id/ProductsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/CartFragment"
         android:name="com.example.green_roots.fragments.CartFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+
+    <fragment
+        android:id="@+id/ProductsFragment"
+        android:name="com.example.green_roots.fragments.ProductsFragment"
         app:defaultNavHost="true"
         android:label=""
         />

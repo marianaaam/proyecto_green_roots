@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -16,6 +18,7 @@ class InicioFragment : Fragment() {
 
     private lateinit var textWelcomeAdmin: TextView
     private lateinit var textWelcomeClient: TextView
+    private lateinit var buttonSeeProducts: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,6 +29,8 @@ class InicioFragment : Fragment() {
 
         textWelcomeAdmin= view.findViewById(R.id.tvWelcomeAdmin)
         textWelcomeClient= view.findViewById(R.id.tvWelcomeClient)
+        buttonSeeProducts = view.findViewById(R.id.buttonSeeProducts)
+
 
         // Accedemos al SharedPreferences
         val sharedPreferences = requireActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE)
@@ -54,6 +59,11 @@ class InicioFragment : Fragment() {
             }
         } else {
             Toast.makeText(requireContext(), "No hay usuario activo", Toast.LENGTH_SHORT).show()
+        }
+
+        // Navegación al fragment de productos
+        buttonSeeProducts.setOnClickListener {
+            findNavController().navigate(R.id.action_inicioFragment_to_ProductsFragment)
         }
 
         return view
