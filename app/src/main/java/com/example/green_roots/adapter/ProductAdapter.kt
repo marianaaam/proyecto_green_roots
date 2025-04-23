@@ -16,8 +16,8 @@ class ProductAdapter(
         val imgProduct: ImageView = itemView.findViewById(R.id.imgProduct)
         val txtName: TextView = itemView.findViewById(R.id.txtName)
         val txtPrice: TextView = itemView.findViewById(R.id.txtPrice)
-        val btnEdit: ImageButton = itemView.findViewById(R.id.btnEdit)
-        val btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
+        val btnEdit: ImageView = itemView.findViewById(R.id.btnEdit)
+        val btnDelete: ImageView = itemView.findViewById(R.id.btnDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {

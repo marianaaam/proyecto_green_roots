@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         // Define los destinos del top level (sin el botón de regreso)
         appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.ProductsFragment,
+            R.id.inicioFragment,
             R.id.CartFragment,
             R.id.PerfilFragment,
             R.id.CategoriasFragment
