@@ -79,4 +79,5 @@
     <string name="textAmount">Cantidad:</string>
     <string name="gProductos">Gestión de productos</string>
     <string name="v_productos">Ver productos</string>
+    <string name="cerrarSesion">Cerrar sesión</string>
 </resources>

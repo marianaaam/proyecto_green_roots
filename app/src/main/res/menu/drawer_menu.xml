@@ -18,7 +18,7 @@
         android:icon="@drawable/ic_profile"
         android:title="@string/perfilMenu" />
     <item
-        android:id="@+id/CategoriasFragment"
+        android:id="@+id/LogoutFragment"
         android:icon="@drawable/ic_cerrar_sesion"
-        android:title="@string/categoriaMenu" />
+        android:title="@string/cerrarSesion" />
 </menu>

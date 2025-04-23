@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             R.id.inicioFragment,
             R.id.CartFragment,
             R.id.PerfilFragment,
-            R.id.CategoriasFragment
         ).build()
 
         // Configura la barra superior para trabajar con la navegación

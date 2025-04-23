@@ -29,4 +29,10 @@
         android:label=""
         />
 
+    <fragment
+        android:id="@+id/LogoutFragment"
+        android:name="com.example.green_roots.fragments.LogoutFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
 </navigation>
