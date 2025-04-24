@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.green_roots.R
 import com.example.green_roots.adapter.ProductAdapter
@@ -24,7 +24,7 @@ class ProductsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_products, container, false)
 
         recyclerView = view.findViewById(R.id.recyclerProducts)
-        recyclerView.layoutManager = GridLayoutManager(context, 2)
+        recyclerView.layoutManager = LinearLayoutManager(context)
 
         productList = listOf(
             Product("Cepillo", 10.000, R.drawable.im_cepillo),

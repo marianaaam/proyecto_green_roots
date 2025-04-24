@@ -28,6 +28,18 @@
         app:defaultNavHost="true"
         android:label=""
         />
+    <fragment
+        android:id="@+id/PerfilFragment"
+        android:name="com.example.green_roots.fragments.PerfilFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+    <fragment
+        android:id="@+id/EditarPerfilFragment"
+        android:name="com.example.green_roots.fragments.EditarPerfilFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
 
     <fragment
         android:id="@+id/ProductsFragment"
