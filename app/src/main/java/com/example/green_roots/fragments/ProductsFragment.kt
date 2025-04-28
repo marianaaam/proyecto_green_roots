@@ -27,9 +27,10 @@ class ProductsFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         productList = listOf(
-            Product("Cepillo", 10.000, R.drawable.im_cepillo),
-            Product("Camisa", 10.000, R.drawable.im_camisa),
-            Product("Utensilios", 10.000, R.drawable.im_utensilios)
+            Product("Cepillo", 10000, R.drawable.im_cepillo),
+            Product("Camisa", 10000, R.drawable.im_camisa),
+            Product("Utensilios", 10000, R.drawable.im_utensilios),
+            Product("Sombras", 10000, R.drawable.im_sombras)
         )
 
         adapter = ProductAdapter(productList)
