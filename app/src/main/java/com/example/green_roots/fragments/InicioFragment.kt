@@ -29,7 +29,6 @@ class InicioFragment : Fragment() {
 
         textWelcomeAdmin= view.findViewById(R.id.tvWelcomeAdmin)
         textWelcomeClient= view.findViewById(R.id.tvWelcomeClient)
-        buttonSeeProducts = view.findViewById(R.id.buttonSeeProducts)
 
 
         // Accedemos al SharedPreferences
@@ -61,10 +60,6 @@ class InicioFragment : Fragment() {
             Toast.makeText(requireContext(), "No hay usuario activo", Toast.LENGTH_SHORT).show()
         }
 
-        // Navegación al fragment de productos
-        buttonSeeProducts.setOnClickListener {
-            findNavController().navigate(R.id.action_inicioFragment_to_ProductsFragment)
-        }
 
         return view
     }
