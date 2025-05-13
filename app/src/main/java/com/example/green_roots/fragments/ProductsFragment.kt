@@ -33,7 +33,7 @@ class ProductsFragment : Fragment() {
             Product("Sombras", 10000, R.drawable.im_sombras)
         )
 
-        adapter = ProductAdapter(productList)
+        adapter = ProductAdapter(requireContext(),productList)
         recyclerView.adapter = adapter
 
         return view

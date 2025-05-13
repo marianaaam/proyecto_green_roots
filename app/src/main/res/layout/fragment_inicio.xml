@@ -45,20 +45,4 @@
         android:fontFamily="serif"
         />
 
-    <Button
-        android:id="@+id/buttonSeeProducts"
-        android:layout_width="257dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="47dp"
-        android:backgroundTint="@color/green"
-        android:fontFamily="serif"
-        android:text="@string/v_productos"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        app:strokeColor="@color/orange"
-        app:strokeWidth="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordLogin" />
-
 </LinearLayout>
