@@ -18,9 +18,9 @@
             android:id="@+id/imgProduct"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            />
     </FrameLayout>
-
 
     <TextView
     android:id="@+id/txtName"
