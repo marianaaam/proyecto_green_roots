@@ -173,5 +173,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSingInLogin" />
 
+    <Button
+        android:id="@+id/buttonInGoogleLogin"
+        android:layout_width="347dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/whiteInputs"
+        android:fontFamily="serif"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:text="@string/textGoogleLogin"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:icon="@drawable/icon_google"
+        app:iconPadding="1dp"
+        app:iconSize="40dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteX="105dp"
+        app:layout_editor_absoluteY="348dp"
+        app:strokeColor="@color/green"
+        app:strokeWidth="2dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

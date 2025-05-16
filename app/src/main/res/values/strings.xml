@@ -85,4 +85,14 @@
     <string name="cerrarSesion">Cerrar sesión</string>
     <string name="nombre_del_producto">Nombre del producto</string>
     <string name="price">$ 0.000</string>
+    <string name="textChangePhoto">Cambiar foto</string>
+    <string name="TittleFragmentComprar">Comprar</string>
+    <string name="textBuyCard">Pagar con tarjeta</string>
+    <string name="textEjNoCard">10xx-232x-x3x4-x1x6</string>
+    <string name="textLabelNoCard">No. Tarjeta</string>
+    <string name="textLabelCaducidad">Caducidad</string>
+    <string name="textEjCaducidad">Ej: 10/28</string>
+    <string name="textLabelCodSecurity">Cod. Seguridad</string>
+    <string name="textBuy2">Pagar</string>
+    <string name="textEjCodSecurity">1x4</string>
 </resources>

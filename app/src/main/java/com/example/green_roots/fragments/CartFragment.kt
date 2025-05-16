@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.green_roots.R
 import org.json.JSONArray
 import org.json.JSONObject
@@ -41,7 +42,7 @@ class CartFragment : Fragment() {
         loadProduct("Utensilios de cocina", 2, 12000)
 
         btnCheckout.setOnClickListener {
-            checkout()
+            findNavController().navigate(R.id.BuyFragment)
         }
 
         loadCartItems()
@@ -146,11 +147,6 @@ class CartFragment : Fragment() {
         tvTotal.text = "Total: ${formatPrice(total)}"
     }
 
-    private fun checkout() {
-        Toast.makeText(requireContext(), "Compra realizada por un ${tvTotal.text}", Toast.LENGTH_LONG).show()
-        sharedPreferences.edit().remove("products").apply()
-        loadCartItems()
-    }
 
     private fun formatPrice(price: Int): String {
         return "$${String.format(Locale.US, "%,d", price)}"

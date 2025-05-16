@@ -21,6 +21,13 @@
         />
 
     <fragment
+        android:id="@+id/BuyFragment"
+        android:name="com.example.green_roots.fragments.BuyFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+
+    <fragment
         android:id="@+id/DirectionsFragment"
         android:name="com.example.green_roots.fragments.DirectionsFragment"
         app:defaultNavHost="true"
