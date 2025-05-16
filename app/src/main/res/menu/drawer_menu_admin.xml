@@ -7,7 +7,7 @@
         android:title="@string/inicioMenu" />
     <item
         android:id="@+id/ProductsFragment"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_products"
         android:title="@string/TittleFragmentProdructos" />
     <item
         android:id="@+id/PerfilFragment"

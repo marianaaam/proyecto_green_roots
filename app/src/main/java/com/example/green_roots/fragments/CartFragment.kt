@@ -38,9 +38,6 @@ class CartFragment : Fragment() {
         btnCheckout = view.findViewById(R.id.btnCheckout)
         tvEmptyCart = view.findViewById(R.id.tvEmptyCart)
 
-        loadProduct("Cepillo para cabello", 1, 15000)
-        loadProduct("Utensilios de cocina", 2, 12000)
-
         btnCheckout.setOnClickListener {
             findNavController().navigate(R.id.BuyFragment)
         }
@@ -78,9 +75,24 @@ class CartFragment : Fragment() {
             total += price * amount
 
             addCartItemView(name, amount, price)
+            addDivider()
         }
 
         updateTotal(total)
+    }
+
+    private fun addDivider() {
+        // Crear un divisor como se muestra en tu código
+        val dividerView = View(requireContext())
+        val params = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            1 // 1dp de altura
+        )
+        params.setMargins(0, 0, 0, 8) // 8dp de margen inferior
+        dividerView.layoutParams = params
+        dividerView.setBackgroundResource(R.color.gray)
+
+        containerLayout.addView(dividerView)
     }
 
     private fun addCartItemView(name: String, amount: Int, price: Int) {
@@ -152,53 +164,6 @@ class CartFragment : Fragment() {
         return "$${String.format(Locale.US, "%,d", price)}"
     }
 
-    //Funcion para cargar algunos productos
-    private fun loadProduct(name: String, amount: Int, price: Int){
-        val control= sharedPreferences.edit()
-
-        val productsJson = sharedPreferences.getString("products", "[]")
-
-        // Convertimos el string JSON a un JSONArray
-        val productsArray = JSONArray(productsJson)
-
-        // veficacion de producto existente
-        var productExists = false
-
-        // Recorremos los productos existentes para buscar coincidencias
-        for (i in 0 until productsArray.length()) {
-            val currentProduct = productsArray.getJSONObject(i)
-
-            // Si encontramos un producto con el mismo nombre
-            if (currentProduct.getString("name") == name) {
-                // Aumentamos la cantidad
-                val currentAmount = currentProduct.getInt("amount")
-                currentProduct.put("amount", currentAmount + amount)
-
-                // Actualizamos el producto en el array
-                productsArray.put(i, currentProduct)
-
-                productExists = true
-                break
-            }
-        }
-
-        // Si el producto no existe, lo añadimos como nuevo
-        if (!productExists) {
-            // Creamos un objeto JSON para el nuevo producto
-            val productObject = JSONObject().apply {
-                put("name", name)
-                put("amount", amount)
-                put("price", price)
-            }
-
-            // Agregamos el producto al array
-            productsArray.put(productObject)
-        }
-
-
-        control.putString("products", productsArray.toString())
-        control.apply()
-    }
 
 
 }

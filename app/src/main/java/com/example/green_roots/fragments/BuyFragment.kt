@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.green_roots.R
 import org.json.JSONArray
 import org.json.JSONObject
@@ -49,6 +50,7 @@ class BuyFragment : Fragment() {
 
         btnCheckout.setOnClickListener {
             checkout()
+            findNavController().navigate(R.id.HistoryShoppingFragment)
         }
 
         loadCartItems()
@@ -85,6 +87,7 @@ class BuyFragment : Fragment() {
                     val price = product.getInt("price")
 
                     addCartItemView(name, amount, price)
+                    addDivider()
                 }
 
                 btnDeploy.animate().rotation(180f).setDuration(300).start()
@@ -99,6 +102,20 @@ class BuyFragment : Fragment() {
 
 
         updateTotal(total)
+    }
+
+    private fun addDivider() {
+        // Crear un divisor como se muestra en tu código
+        val dividerView = View(requireContext())
+        val params = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            1 // 1dp de altura
+        )
+        params.setMargins(0, 0, 0, 4) // 8dp de margen inferior
+        dividerView.layoutParams = params
+        dividerView.setBackgroundResource(R.color.gray)
+
+        containerLayout.addView(dividerView)
     }
 
     private fun addCartItemView(name: String, amount: Int, price: Int) {
