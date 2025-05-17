@@ -85,4 +85,19 @@
     <string name="cerrarSesion">Cerrar sesión</string>
     <string name="nombre_del_producto">Nombre del producto</string>
     <string name="price">$ 0.000</string>
+    <string name="a_producto">Añadir producto</string>
+    <string name="d_añadir">Añade un nuevo producto al sistema</string>
+    <string name="btn_cargar_imagen">Cargar imagen</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="t_imagen">Imagen:</string>
+    <string name="no_seleccionado">No seleccionado</string>
+    <string name="empresa">Empresa:</string>
+    <string name="t_empresa">Empresa</string>
+    <string name="editar_producto">Editar Producto</string>
+    <string name="d_editar">Edita el producto seleccionado</string>
+    <string name="titulo">Título:</string>
+    <string name="precio">Precio:</string>
+    <string name="descripcion">Descripción:</string>
+    <string name="razon_ecologica">Razón ecológica:</string>
+    <string name="categoria">Categoría:</string>
 </resources>

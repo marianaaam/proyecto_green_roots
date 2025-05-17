@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/editar_producto"
+            android:text="@string/a_producto"
             android:fontFamily="@font/inria_serif_light"
             android:textColor="#0A9C4D"
             android:textSize="24sp"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inria_serif_light"
-            android:text="@string/d_editar"
+            android:text="@string/d_añadir"
             android:textColor="@color/gray2"
             android:textSize="16sp"
             android:layout_gravity="center_horizontal"
@@ -47,11 +47,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/titulo"
-                android:textColor="#000"
-                />
+                android:textColor="#000" />
 
             <EditText
-                android:id="@+id/editTextTitulo"
+                android:id="@+id/etTitulo"
                 style="@style/StyledInput"
                 android:hint="@string/titulo"
                 />
@@ -71,11 +70,10 @@
                 android:layout_width="wrap_content"
                 />
             <EditText
-                android:id="@+id/editTextPrecio"
+                android:id="@+id/etPrecio"
                 style="@style/StyledInput"
                 android:inputType="numberDecimal"
-                android:hint="@string/precio"
-                />
+                android:hint="@string/precio" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,7 +89,7 @@
                 android:layout_width="wrap_content"
                 />
             <EditText
-                android:id="@+id/editTextDescripcion"
+                android:id="@+id/etDescripcion"
                 style="@style/StyledInput"
                 android:inputType="textMultiLine"
                 android:lines="3"
@@ -111,9 +109,8 @@
                 android:layout_height="20dp"
                 android:layout_width="wrap_content"
                 />
-
             <EditText
-                android:id="@+id/editTextRazon"
+                android:id="@+id/etRazon"
                 style="@style/StyledInput"
                 android:hint="@string/razon_ecologica" />
         </LinearLayout>
@@ -130,7 +127,7 @@
                 android:layout_width="wrap_content"
                 />
             <EditText
-                android:id="@+id/editTextCategoria"
+                android:id="@+id/etCategoria"
                 style="@style/StyledInput"
                 android:hint="@string/categoria" />
         </LinearLayout>
@@ -179,7 +176,7 @@
                 android:layout_width="wrap_content"/>
 
             <EditText
-                android:id="@+id/editTextEmpresa"
+                android:id="@+id/etEmpresa"
                 style="@style/StyledInput"
                 android:hint="@string/t_empresa" />
         </LinearLayout>
