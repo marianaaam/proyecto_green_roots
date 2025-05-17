@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="@string/TittleFragmentComprar"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:fontFamily="serif"
+                android:gravity="start"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                app:srcCompat="@drawable/logo"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/rounded_corners"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginBottom="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end|center"
+            android:layout_marginTop="16dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/buttonDeploy"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/icon_deploy"
+                />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/textTotalDefect"
+                android:gravity="end"
+                android:fontFamily="serif"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/cartItemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                />
+
+        </ScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textBuyCard"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="serif"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textLabelNoCard"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            />
+
+        <EditText
+            android:id="@+id/etNunCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textEjNoCard"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textLabelCaducidad"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            />
+
+        <EditText
+            android:id="@+id/etCaducidad"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:ems="20"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textEjCaducidad"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textLabelCodSecurity"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            />
+
+        <EditText
+            android:id="@+id/etCodSecurity"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            style="@style/EditTextRounded"
+            android:layout_marginTop="10dp"
+            android:hint="@string/textEjCodSecurity"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            >
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textBuy2"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

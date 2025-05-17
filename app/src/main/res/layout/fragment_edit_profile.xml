@@ -75,8 +75,8 @@
                 android:layout_height="100dp"
                 android:background="@drawable/rounded_corners"
                 android:clipToOutline="true"
-                android:paddingTop="10dp"
-                app:srcCompat="@drawable/icon_user" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_user" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     app:strokeColor="@color/orange"
                     app:strokeWidth="3dp"
                     android:fontFamily="serif"
-                    android:text="Cambiar foto"
+                    android:text="@string/textChangePhoto"
                     android:textColor="@color/white"
                     />
 

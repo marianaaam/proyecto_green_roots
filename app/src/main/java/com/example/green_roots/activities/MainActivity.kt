@@ -69,7 +69,8 @@ class MainActivity : AppCompatActivity() {
             R.id.CartFragment,
             R.id.PerfilFragment,
             R.id.DirectionsFragment,
-            R.id.ProductsFragment
+            R.id.ProductsFragment,
+            R.id.HistoryShoppingFragment
         ).setDrawerLayout(drawerLayout)
         .build()
 
