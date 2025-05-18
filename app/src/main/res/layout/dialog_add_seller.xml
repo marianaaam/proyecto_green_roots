@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_product_card"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textAddSeller"
+        android:textSize="30sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textInstructiveRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textInstructiveRegister"
+        android:fontFamily="serif"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+        android:id="@+id/etNameSeller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        style="@style/EditTextRounded"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/textNameRegister"
+        />
+    <EditText
+        android:id="@+id/etLastNameSeller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        style="@style/EditTextRounded"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/textLastNameRegister"
+        />
+
+    <EditText
+        android:id="@+id/etEmailSeller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        style="@style/EditTextRounded"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/textEmailRegister"
+        />
+
+    <EditText
+        android:id="@+id/etPhoneSeller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        style="@style/EditTextRounded"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/textPhoneRegister"
+        />
+
+    <EditText
+        android:id="@+id/etPasswordSeller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        style="@style/EditTextRounded"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/textPasswordRegister"
+        />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textRegister"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/whiteInputs"
+        android:paddingHorizontal="32dp"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="2dp"
+        android:fontFamily="serif"
+        />
+
+</LinearLayout>

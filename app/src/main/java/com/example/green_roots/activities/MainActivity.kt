@@ -70,7 +70,9 @@ class MainActivity : AppCompatActivity() {
             R.id.PerfilFragment,
             R.id.DirectionsFragment,
             R.id.ProductsFragment,
-            R.id.HistoryShoppingFragment
+            R.id.HistoryShoppingFragment,
+            R.id.SellersFragment,
+            R.id.CategoryFragment
         ).setDrawerLayout(drawerLayout)
         .build()
 

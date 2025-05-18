@@ -56,6 +56,7 @@ class ProductAdapter(
                     // Aquí mostramos las opciones del cliente
                     holder.btnEdit.visibility = View.GONE  // Opcion para ocultar ocultarlo
                     holder.btnDelete.visibility = View.GONE // Opcion para hacerlo ocultarlo
+
                     holder.btnCarrito.visibility = View.VISIBLE // Opcion para hacerlo visible
                 }
                 else -> {
