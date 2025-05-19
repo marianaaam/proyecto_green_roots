@@ -111,4 +111,5 @@
     <string name="textBuy2">Pagar</string>
     <string name="textEjCodSecurity">1x4</string>
     <string name="TittleFragmentCompras">Compras</string>
+    <string name="seleccionar_imagen">Seleccionar imagen</string>
 </resources>

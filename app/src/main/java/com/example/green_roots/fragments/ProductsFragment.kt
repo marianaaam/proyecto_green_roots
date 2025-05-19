@@ -1,64 +1,77 @@
 package com.example.green_roots.fragments
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.green_roots.R
 import com.example.green_roots.adapter.ProductAdapter
 import com.example.green_roots.model.Product
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import org.json.JSONArray
 
 class ProductsFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ProductAdapter
-    private lateinit var productList: MutableList<Product>
+    private lateinit var sharedPrefs: SharedPreferences
+    private val productList = mutableListOf<Product>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_products, container, false)
+        sharedPrefs = requireContext().getSharedPreferences("ProductData", Context.MODE_PRIVATE)
 
         recyclerView = view.findViewById(R.id.recyclerProducts)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        // Lista inicial de productos
-        productList = mutableListOf(
-            Product("Cepillo", 10000, R.drawable.im_cepillo),
-            Product("Camisa", 10000, R.drawable.im_camisa),
-            Product("Utensilios", 10000, R.drawable.im_utensilios),
-            Product("Sombras", 10000, R.drawable.im_sombras)
-        )
-
-        val args = arguments
-        val titulo = args?.getString("titulo")
-        val priceDouble = args?.getDouble("precio")
-        val nuevoProductoImg = R.drawable.ic_default
-
-        // Si título y precio existen, agrega nuevo producto a la lista
-        if (titulo != null && priceDouble != null) {
-
-            val precioInt = priceDouble.toInt()
-            val nuevoProducto = Product(titulo, precioInt, nuevoProductoImg)
-            productList.add(nuevoProducto)
-        }
+        loadProducts()
 
         adapter = ProductAdapter(requireContext(), productList)
         recyclerView.adapter = adapter
 
-        val fabAdd = view.findViewById<FloatingActionButton>(R.id.bt_add)
-        fabAdd.setOnClickListener {
+        view.findViewById<FloatingActionButton>(R.id.bt_add).setOnClickListener {
             findNavController().navigate(R.id.AddProductFragment)
         }
 
         return view
     }
 
-}
+    private fun loadProducts() {
+        productList.clear() // Limpia la lista antes de llenarla
 
+        val json = sharedPrefs.getString("products", "[]") ?: "[]"
+        val arr = JSONArray(json)
+
+        for (i in 0 until arr.length()) {
+            val obj = arr.getJSONObject(i)
+            val name = obj.getString("name")
+            val price = obj.getInt("price")
+            val imageUri = obj.optString("imageUri", "")
+            val description = obj.optString("description", "")
+            val reason = obj.optString("reason", "")
+            val category = obj.optString("category", "")
+            val company = obj.optString("company", "")
+
+            val product = Product(
+                name = name,
+                price = price,
+                imageResId = R.drawable.ic_default,
+                imageUri = imageUri,
+                description = description,
+                reason = reason,
+                category = category,
+                company = company
+            )
+            productList.add(product)
+        }
+    }
+}
