@@ -10,6 +10,14 @@
         android:icon="@drawable/ic_products"
         android:title="@string/TittleFragmentProdructos" />
     <item
+        android:id="@+id/SellersFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/TittleFragmentSellers" />
+    <item
+        android:id="@+id/CategoryFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/TittleFragmentCategory" />
+    <item
         android:id="@+id/PerfilFragment"
         android:icon="@drawable/ic_profile"
         android:title="@string/perfilMenu" />

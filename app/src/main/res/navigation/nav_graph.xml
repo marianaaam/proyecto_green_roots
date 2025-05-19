@@ -34,6 +34,20 @@
         />
 
     <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.example.green_roots.fragments.CategoryFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+
+    <fragment
+        android:id="@+id/SellersFragment"
+        android:name="com.example.green_roots.fragments.SellersFragment"
+        app:defaultNavHost="true"
+        android:label=""
+        />
+
+    <fragment
         android:id="@+id/DirectionsFragment"
         android:name="com.example.green_roots.fragments.DirectionsFragment"
         app:defaultNavHost="true"

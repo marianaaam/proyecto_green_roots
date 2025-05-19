@@ -111,5 +111,16 @@
     <string name="textBuy2">Pagar</string>
     <string name="textEjCodSecurity">1x4</string>
     <string name="TittleFragmentCompras">Compras</string>
+    <string name="textEmptySellers">No hay vendedores registrados</string>
+    <string name="TittleFragmentSellers">Gestion de Vendedores</string>
+    <string name="textAddSeller">Crear vendedor</string>
+    <string name="textDeleteSeller">Sí, seguro</string>
+    <string name="textEditSeller">Editar vendedor</string>
+    <string name="textEditCategory">Editar Categoria</string>
+    <string name="textTittleRegisterCategory">Titulo</string>
+    <string name="textDescriptionRegisterCategory">Descripción</string>
+    <string name="textAddCategory">Crear Rol</string>
+    <string name="textEmptyCategory">No hay categorias registradas</string>
+    <string name="TittleFragmentCategory">Gestionar Categorias</string>
     <string name="seleccionar_imagen">Seleccionar imagen</string>
 </resources>
