@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             when (rol) {
                 "admin" -> navigationView.inflateMenu(R.menu.drawer_menu_admin)
                 "cliente" -> navigationView.inflateMenu(R.menu.drawer_menu_client)
+                "vendedor" -> navigationView.inflateMenu(R.menu.drawer_menu_seller)
                 else -> {
                     Toast.makeText(this, "Rol desconocido", Toast.LENGTH_SHORT).show()
                     navigationView.inflateMenu(R.menu.drawer_menu_client) // Menú por defecto

@@ -21,6 +21,18 @@
         />
 
     <TextView
+        android:id="@+id/tvWelcomeSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textWelcomeStartSeller"
+        android:textSize="30sp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        />
+
+    <TextView
         android:id="@+id/tvWelcomeClient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -77,7 +77,7 @@
         android:textColor="@color/black"
         style="@style/EditTextRounded"
         android:layout_marginBottom="8dp"
-        android:hint="@string/textPhoneRegister" />
+        android:hint="@string/textPasswordRegister" />
 
     <Button
         android:id="@+id/buttonEdit"

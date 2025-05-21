@@ -18,6 +18,7 @@ class InicioFragment : Fragment() {
 
     private lateinit var textWelcomeAdmin: TextView
     private lateinit var textWelcomeClient: TextView
+    private lateinit var textWelcomeSeller: TextView
     private lateinit var buttonSeeProducts: Button
 
     override fun onCreateView(
@@ -29,6 +30,7 @@ class InicioFragment : Fragment() {
 
         textWelcomeAdmin= view.findViewById(R.id.tvWelcomeAdmin)
         textWelcomeClient= view.findViewById(R.id.tvWelcomeClient)
+        textWelcomeSeller= view.findViewById(R.id.tvWelcomeSeller)
 
 
         // Accedemos al SharedPreferences
@@ -42,15 +44,21 @@ class InicioFragment : Fragment() {
             when (rol) {
                 "admin" -> {
                     Toast.makeText(requireContext(), "Bienvenido Admin", Toast.LENGTH_SHORT).show()
-                    // Aquí mostramos las opciones del administrador
                     textWelcomeClient.visibility = View.GONE  // Opcion para ocultar contenido
+                    textWelcomeSeller.visibility = View.GONE
                     textWelcomeAdmin.visibility = View.VISIBLE // Opcion para hacerlo visible
                 }
                 "cliente" -> {
                     Toast.makeText(requireContext(), "Bienvenido Cliente", Toast.LENGTH_SHORT).show()
-                    // Aquí mostramos las opciones del cliente
                     textWelcomeClient.visibility = View.VISIBLE
+                    textWelcomeSeller.visibility = View.GONE
                     textWelcomeAdmin.visibility = View.GONE
+                }
+                "vendedor" -> {
+                    Toast.makeText(requireContext(), "Bienvenido Vendedor", Toast.LENGTH_SHORT).show()
+                    textWelcomeClient.visibility = View.GONE  // Opcion para ocultar contenido
+                    textWelcomeSeller.visibility = View.VISIBLE
+                    textWelcomeAdmin.visibility = View.GONE // Opcion para hacerlo visible
                 }
                 else -> {
                     Toast.makeText(requireContext(), "Rol desconocido", Toast.LENGTH_SHORT).show()

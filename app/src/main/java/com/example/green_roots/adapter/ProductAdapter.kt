@@ -62,6 +62,12 @@ class ProductAdapter(
                     holder.btnDelete.visibility = View.GONE // Opcion para hacerlo ocultarlo
                     holder.btnCarrito.visibility = View.VISIBLE // Opcion para hacerlo visible
                 }
+                "vendedor" -> {
+                    // Aquí mostramos las opciones del vendedor
+                    holder.btnEdit.visibility = View.VISIBLE  // Opcion para ocultar visible
+                    holder.btnDelete.visibility = View.VISIBLE // Opcion para hacerlo visible
+                    holder.btnCarrito.visibility = View.GONE // Opcion para hacerlo ocultarlo
+                }
                 else -> {
                     Toast.makeText(context, "Rol desconocido", Toast.LENGTH_SHORT).show()
                 }
