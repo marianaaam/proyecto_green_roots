@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +16,7 @@ import com.example.green_roots.adapter.ProductAdapter
 import com.example.green_roots.model.Product
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.json.JSONArray
+import org.json.JSONObject
 
 class ProductsFragment : Fragment() {
 
@@ -37,6 +39,33 @@ class ProductsFragment : Fragment() {
 
         adapter = ProductAdapter(requireContext(), productList)
         recyclerView.adapter = adapter
+
+        val sharedPreferences = requireActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE)
+        val activeUserJson = sharedPreferences.getString("activeUser", null)
+
+        if (activeUserJson != null) {
+            val activeUser = JSONObject(activeUserJson)
+            val rol = activeUser.getString("rol")
+
+            when (rol) {
+                "admin" -> {
+                    // Aquí mostramos las opciones del administrador
+                    view.findViewById<FloatingActionButton>(R.id.bt_add).visibility = View.VISIBLE // Opcion para hacerlo visible
+                }
+                "cliente" -> {
+                    view.findViewById<FloatingActionButton>(R.id.bt_add).visibility = View.GONE
+                }
+                "vendedor" -> {
+                    // Aquí mostramos las opciones del vendedor
+                    view.findViewById<FloatingActionButton>(R.id.bt_add).visibility = View.VISIBLE // Opcion para hacerlo visible
+                }
+                else -> {
+                    Toast.makeText(requireContext(), "Rol desconocido", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } else {
+            Toast.makeText(requireContext(), "No hay usuario activo", Toast.LENGTH_SHORT).show()
+        }
 
         view.findViewById<FloatingActionButton>(R.id.bt_add).setOnClickListener {
             findNavController().navigate(R.id.AddProductFragment)
