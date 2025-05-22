@@ -77,17 +77,44 @@ class ProductAdapter(
 
         // Eventos de los botones
         holder.btnEdit.setOnClickListener {
-            Toast.makeText(it.context, "Editar ${product.name}", Toast.LENGTH_SHORT).show()
+            val bundle = Bundle().apply {
+                putString("name", product.name)
+                putInt("price", product.price)
+                putInt("imageResId", product.imageResId)
+                putString("imageUri", product.imageUri)
+                putString("description", product.description)
+                putString("reason", product.reason)
+                putString("category", product.category)
+                putString("company", product.company)
+            }
+            val navController = Navigation.findNavController(holder.itemView)
+            navController.navigate(R.id.AddProductFragment, bundle)
         }
 
         holder.btnDelete.setOnClickListener {
-            Toast.makeText(it.context, "Eliminar ${product.name}", Toast.LENGTH_SHORT).show()
+            val prefs = context.getSharedPreferences("ProductData", Context.MODE_PRIVATE)
+            val jsonArray = JSONArray(prefs.getString("products", "[]"))
+            val newArray = JSONArray()
+
+            for (i in 0 until jsonArray.length()) {
+                val obj = jsonArray.getJSONObject(i)
+                if (obj.getString("name") != product.name) {
+                    newArray.put(obj)
+                }
+            }
+
+            prefs.edit().putString("products", newArray.toString()).apply()
+            Toast.makeText(context, "${product.name} eliminado", Toast.LENGTH_SHORT).show()
+            (context as? Activity)?.recreate()
         }
 
         holder.btnCarrito.setOnClickListener {
             addProductShoppingCart(product.name, 1, product.price)
         }
+
+
     }
+
 
     private fun addProductShoppingCart(name: String, amount: Int, price: Int){
         var sharedPreferences = context.getSharedPreferences("ShoppingCart", Context.MODE_PRIVATE)

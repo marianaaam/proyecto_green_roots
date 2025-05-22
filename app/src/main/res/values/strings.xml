@@ -119,7 +119,7 @@
     <string name="textEditCategory">Editar Categoria</string>
     <string name="textTittleRegisterCategory">Titulo</string>
     <string name="textDescriptionRegisterCategory">Descripción</string>
-    <string name="textAddCategory">Crear Rol</string>
+    <string name="textAddCategory">Crear Categoria</string>
     <string name="textEmptyCategory">No hay categorias registradas</string>
     <string name="TittleFragmentCategory">Gestionar Categorias</string>
     <string name="seleccionar_imagen">Seleccionar imagen</string>
