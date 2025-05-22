@@ -37,7 +37,12 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
-        holder.imgProduct.setImageResource(product.imageResId)
+        if (!product.imageUri.isNullOrEmpty()) {
+            val uri = Uri.parse(product.imageUri)
+            holder.imgProduct.setImageURI(uri)
+        } else {
+            holder.imgProduct.setImageResource(product.imageResId)
+        }
         holder.txtName.text = product.name
         holder.txtPrice.text = "$${product.price}"
 
