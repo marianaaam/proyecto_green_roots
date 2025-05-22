@@ -123,4 +123,6 @@
     <string name="textEmptyCategory">No hay categorias registradas</string>
     <string name="TittleFragmentCategory">Gestionar Categorias</string>
     <string name="seleccionar_imagen">Seleccionar imagen</string>
+    <string name="t_vendedor">Vendedor</string>
+    <string name="vendedor">Vendedor</string>
 </resources>

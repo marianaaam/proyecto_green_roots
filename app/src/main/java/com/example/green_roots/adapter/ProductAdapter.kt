@@ -37,14 +37,14 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
-        if (!product.imageUri.isNullOrEmpty()) {
-            val uri = Uri.parse(product.imageUri)
-            holder.imgProduct.setImageURI(uri)
-        } else {
-            holder.imgProduct.setImageResource(product.imageResId)
-        }
         holder.txtName.text = product.name
         holder.txtPrice.text = "$${product.price}"
+
+        if (!product.imageUri.isNullOrEmpty()) {
+            holder.imgProduct.setImageURI(Uri.parse(product.imageUri))
+        } else {
+            holder.imgProduct.setImageResource(R.drawable.ic_default)
+        }
 
         // Accedemos al SharedPreferences
         val sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE)
@@ -85,7 +85,7 @@ class ProductAdapter(
                 putString("description", product.description)
                 putString("reason", product.reason)
                 putString("category", product.category)
-                putString("company", product.company)
+                putString("seller", product.seller)
             }
             val navController = Navigation.findNavController(holder.itemView)
             navController.navigate(R.id.AddProductFragment, bundle)

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -30,8 +31,8 @@ class AddProductFragment : Fragment() {
     private lateinit var etPrecio: EditText
     private lateinit var etDescripcion: EditText
     private lateinit var etRazon: EditText
-    private lateinit var etCategoria: EditText
-    private lateinit var etEmpresa: EditText
+    private lateinit var etCategoria: AutoCompleteTextView
+    private lateinit var etSeller: AutoCompleteTextView
     private lateinit var btnGuardar: Button
     private lateinit var sharedPrefs: SharedPreferences
 
@@ -65,7 +66,7 @@ class AddProductFragment : Fragment() {
         etDescripcion = view.findViewById(R.id.etDescripcion)
         etRazon = view.findViewById(R.id.etRazon)
         etCategoria = view.findViewById(R.id.etCategoria)
-        etEmpresa = view.findViewById(R.id.etEmpresa)
+        etSeller = view.findViewById(R.id.etSeller)
         btnGuardar = view.findViewById(R.id.btnGuardarProducto)
         imgPreview = view.findViewById(R.id.imgPreview)
         btnSeleccionarImagen = view.findViewById(R.id.btnSeleccionarImagen)
@@ -80,7 +81,7 @@ class AddProductFragment : Fragment() {
             etDescripcion.setText(args.getString("description") ?: "")
             etRazon.setText(args.getString("reason") ?: "")
             etCategoria.setText(args.getString("category") ?: "")
-            etEmpresa.setText(args.getString("company") ?: "")
+            etSeller.setText(args.getString("seller") ?: "")
             selectedImageUri = args.getString("imageUri")
             selectedImageUri?.let {
                 imgPreview.setImageURI(Uri.parse(it))
@@ -106,7 +107,7 @@ class AddProductFragment : Fragment() {
         val descripcion = etDescripcion.text.toString().trim()
         val reason = etRazon.text.toString().trim()
         val categoria = etCategoria.text.toString().trim()
-        val empresa = etEmpresa.text.toString().trim()
+        val vendedor = etSeller.text.toString().trim()
 
         val json = sharedPrefs.getString("products", "[]") ?: "[]"
         val jsonArray = JSONArray(json)
@@ -123,7 +124,7 @@ class AddProductFragment : Fragment() {
                     put("description", descripcion)
                     put("reason", reason)
                     put("category", categoria)
-                    put("company", empresa)
+                    put("seller", vendedor)
                 }
                 newArray.put(updatedProduct)
             } else {
@@ -140,7 +141,7 @@ class AddProductFragment : Fragment() {
                 put("description", descripcion)
                 put("reason", reason)
                 put("category", categoria)
-                put("company", empresa)
+                put("seller", vendedor)
             }
             newArray.put(newProduct)
         }

@@ -59,7 +59,7 @@ class ProductsFragment : Fragment() {
             val description = obj.optString("description", "")
             val reason = obj.optString("reason", "")
             val category = obj.optString("category", "")
-            val company = obj.optString("company", "")
+            val seller = obj.optString("seller", "")
 
             val product = Product(
                 name = name,
@@ -69,7 +69,7 @@ class ProductsFragment : Fragment() {
                 description = description,
                 reason = reason,
                 category = category,
-                company = company
+                seller = seller
             )
             productList.add(product)
         }
