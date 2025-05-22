@@ -14,6 +14,10 @@ import com.example.green_roots.R
 import com.example.green_roots.model.Product
 import org.json.JSONArray
 import org.json.JSONObject
+import android.content.Intent
+import android.graphics.ImageDecoder
+import android.os.Build
+import android.provider.MediaStore
 
 class ProductAdapter(
     private val context: Context,
@@ -37,9 +41,35 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
-        holder.imgProduct.setImageResource(product.imageResId)
         holder.txtName.text = product.name
         holder.txtPrice.text = "$${product.price}"
+
+        // Improved image loading for all users
+        if (!product.imageUri.isNullOrEmpty()) {
+            try {
+                val uri = Uri.parse(product.imageUri)
+                // Use ContentResolver to take() the persistable permission
+                context.contentResolver.takePersistableUriPermission(
+                    uri,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+                
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    val source = ImageDecoder.createSource(context.contentResolver, uri)
+                    val bitmap = ImageDecoder.decodeBitmap(source)
+                    holder.imgProduct.setImageBitmap(bitmap)
+                } else {
+                    @Suppress("DEPRECATION")
+                    val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, uri)
+                    holder.imgProduct.setImageBitmap(bitmap)
+                }
+            } catch (Exception: Exception) {
+                // If loading fails, set default image
+                holder.imgProduct.setImageResource(R.drawable.ic_default)
+            }
+        } else {
+            holder.imgProduct.setImageResource(R.drawable.ic_default)
+        }
 
         // Accedemos al SharedPreferences
         val sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE)
@@ -86,7 +116,7 @@ class ProductAdapter(
                 putString("description", product.description)
                 putString("reason", product.reason)
                 putString("category", product.category)
-                putString("company", product.company)
+                putString("seller", product.seller)
             }
             val navController = Navigation.findNavController(holder.itemView)
             navController.navigate(R.id.AddProductFragment, bundle)

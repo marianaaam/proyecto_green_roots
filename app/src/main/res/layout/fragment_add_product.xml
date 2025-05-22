@@ -127,10 +127,11 @@
                 android:layout_height="20dp"
                 android:layout_width="wrap_content"
                 />
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/etCategoria"
                 style="@style/StyledInput"
-                android:hint="@string/categoria" />
+                android:hint="@string/categoria"
+                android:inputType="text"/>
         </LinearLayout>
 
         <!-- Imagen -->
@@ -143,15 +144,16 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:text="@string/empresa"
+                android:text="@string/vendedor"
                 android:textColor="#000"
                 android:layout_height="20dp"
                 android:layout_width="wrap_content"/>
 
-            <EditText
-                android:id="@+id/etEmpresa"
+            <AutoCompleteTextView
+                android:id="@+id/etSeller"
                 style="@style/StyledInput"
-                android:hint="@string/t_empresa" />
+                android:hint="@string/t_vendedor"
+                android:inputType="text"/>
         </LinearLayout>
 
 

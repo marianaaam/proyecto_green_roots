@@ -10,6 +10,6 @@ data class Product(
     val description: String = "",
     val reason: String = "",
     val category: String = "",
-    val company: String = "",
+    val seller: String = "",
 
     )

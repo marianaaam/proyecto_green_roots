@@ -124,4 +124,6 @@
     <string name="TittleFragmentCategory">Gestionar Categorias</string>
     <string name="seleccionar_imagen">Seleccionar imagen</string>
     <string name="textWelcomeStartSeller">Bienvenido a GreenRoots Vendedor!!!</string>
+    <string name="t_vendedor">Vendedor</string>
+    <string name="vendedor">Vendedor</string>
 </resources>
